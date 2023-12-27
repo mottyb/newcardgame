@@ -1,0 +1,246 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: fantasy;
+    background: url(https://game.halavudvash.co.il/images/10.jpg);
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: fantasy;
+    font-weight: 300;
+    font-size: 45px;
+}
+
+
+.deck {
+    padding: 32px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-content: space-around;
+}
+
+.deck .card {
+    height: 120px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    width: 120px;
+    background: #f6c147;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.open {
+    cursor: pointer;
+}
+
+.score-panel {
+    width: 345px;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.score-panel .restart {
+    float: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.popup {
+    font-family: fantasy;
+    background: url(https://game.halavudvash.co.il/images/10.jpg);
+    background-repeat: repeat-y;
+    background-size: cover;
+    z-index: 1;
+    display: none;
+    margin: 0 auto;
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    left: 0;
+    top: 0;
+}
+.popup span{
+    color: red;
+}
+
+.content {
+    padding: 10px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.562);
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.close {
+    color: #000;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+#basicUsage {
+    position: fixed;
+    background: url('https://game.halavudvash.co.il/images/1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #000;
+    text-shadow: 1px 1px #f6c147;
+}
+
+.moves-panel {
+    position: fixed;
+    background: url('https://game.halavudvash.co.il/images/1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #000;
+    text-shadow: 1px 1px #f6c147;
+}
+.deck .card.open .fa-paper-plane-o, .deck .card.match .fa-paper-plane-o {
+    content: url('https://game.halavudvash.co.il/images/c-1.png') !important;
+    height: 120px !important;
+    width: 120px !important;
+    border-radius: 8px;
+}
+
+.deck .card.open .fa-bomb, .deck .card.match .fa-bomb{
+    content: url('https://game.halavudvash.co.il/images/c-2.png') !important;
+    height: 120px !important;
+    width: 120px !important;
+    border-radius: 8px;
+}
+
+.deck .card.open .fa-anchor, .deck .card.match .fa-anchor{
+    content: url('https://game.halavudvash.co.il/images/c-3.png') !important;
+    height: 120px !important;
+    width: 120px !important;
+    border-radius: 8px;
+}
+
+.deck .card.open .fa-diamond, .deck .card.match .fa-diamond{
+    content: url('https://game.halavudvash.co.il/images/c-4.png') !important;
+    height: 120px !important;
+    width: 120px !important;
+    border-radius: 8px;
+}
+
+.deck .card.open .fa-bolt, .deck .card.match .fa-bolt{
+    content: url('https://game.halavudvash.co.il/images/c-5.png') !important;
+    height: 120px !important;
+    width: 120px !important;
+    border-radius: 8px;
+}
+
+.deck .card.open .fa-leaf, .deck .card.match .fa-leaf{
+    content: url('https://game.halavudvash.co.il/images/c-6.png') !important;
+    height: 120px !important;
+    width: 120px !important;
+    border-radius: 8px;
+}
+
+.deck .card.open .fa-cube, .deck .card.match .fa-cube{
+    content: url('https://game.halavudvash.co.il/images/c-7.png') !important;
+    height: 120px !important;
+    width: 120px !important;
+    border-radius: 8px;
+}
+
+.deck .card.open .fa-bicycle, .deck .card.match .fa-bicycle{
+    content: url('https://game.halavudvash.co.il/images/c-8.png') !important;
+    height: 120px !important;
+    width: 120px !important;
+    border-radius: 8px;
+}
+
+
+.fa-repeat:before, .moves {
+    FONT-SIZE: 29px;
+    color: #1367a8;
+}
+@media only screen and (min-width: 600px) {
+      #basicUsage {
+    top: 20px;
+    left: 20px;
+    width: 298px;
+    height: 153px;
+    line-height: 188px;
+    font-size: 20px;
+}
+    .moves-panel {
+    top: 20px;
+    right: 20px;
+    width: 298px;
+    height: 153px;
+    line-height: 188px;
+    font-size: 20px;;
+}
+.deck {
+    width: 652px;
+    min-height: 680px;
+    gap: 20px;
+}
+}
+
+@media only screen and (max-width: 600px) {
+    #basicUsage {
+    top: 57px;
+    left: -17px;
+    width: 200px;
+    height: 110px;
+    line-height: 136px;
+    font-size: 14px;
+}
+    .moves-panel {
+    top: 57px;
+    right: -17px;    
+    width: 200px;
+    height: 110px;
+    line-height: 136px;
+    font-size: 14px;
+}
+.deck {
+    width: 552px;
+    min-height: 680px;
+    gap: 10px;
+}
+}
+

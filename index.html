@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Once upon a time </title>
+    <meta name="description" content="">
+    <!--<link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="https://game.halavudvash.co.il/css/app.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Once upon <span>a time</span></h1>
+        </header>
+        <section class="score-panel">
+            <div class="moves-panel">
+            <span class="moves">0</span> Moves
+            </div>
+            <div class="restart">
+                ↺ Restart game
+            </div>
+        </section>
+        <div id="basicUsage"> 00:00:00 </div>
+        <ul class="deck">
+        </ul>
+    </div>
+    <div class="popup">
+        <div class="content">
+            <span class="close">&times;</span>
+            <img src="https://game.halavudvash.co.il/images/11.png" alt="">
+            <h1>Congratulations,</h1>
+            <p>You completed the game in time
+                <span id="timer"> 00:00:00 </span> <BR /> with total number of moves:
+                <span id="moves">0</span>
+        </div>
+    </div>
+    <script src="js/easytimer.min.js">
+    </script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
